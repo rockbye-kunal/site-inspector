@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Site Inspector",
+  "version": "0.2.0",
+  "description": "Inspect any URL: metadata, DNS, RDAP, IP geo, security grade, PageSpeed, and more.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Site Inspector"
+  },
+  "permissions": ["activeTab", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"]
+}

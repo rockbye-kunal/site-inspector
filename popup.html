@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Site Inspector</span>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="Toggle theme" type="button">🌙</button>
+    </header>
+
+    <form id="form" class="form">
+      <div class="input-pill">
+        <input id="url" type="text" placeholder="https://example.com" autofocus spellcheck="false" autocomplete="off">
+        <button type="submit" class="submit-btn" title="Analyze">▶</button>
+      </div>
+      <div class="row-actions">
+        <button id="useCurrent" class="link-btn" type="button">↳ Use current tab</button>
+        <details id="historyDropdown" class="history">
+          <summary>⌄ History</summary>
+          <ul id="historyList"></ul>
+        </details>
+      </div>
+    </form>
+
+    <nav class="tabs" id="tabs">
+      <button class="tab" data-tab="overview" aria-selected="true">Overview</button>
+      <button class="tab" data-tab="seo">SEO</button>
+      <button class="tab" data-tab="tech">Tech</button>
+      <button class="tab" data-tab="network">Network</button>
+      <button class="tab" data-tab="security">Security</button>
+      <button class="tab" data-tab="performance">Perf</button>
+    </nav>
+
+    <main id="tabContent" class="tab-content">
+      <div class="empty-state">
+        <div class="empty-glyph">◎</div>
+        <div class="empty-title">No site analyzed yet</div>
+        <div class="empty-sub">Enter a URL above to inspect any website</div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button id="exportBtn" class="link-btn" type="button" disabled>⬇ Export JSON</button>
+      <span id="status" class="status"></span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
